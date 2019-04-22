@@ -1,0 +1,70 @@
+{
+  "name": "@svgdotjs/svg.pathmod.js",
+  "version": "3.0.0",
+  "description": "An extension for svg.js to modify paths",
+  "main": "dist/svg.pathmod.js",
+  "unpkg": "dist/svg.pathmod.min.js",
+  "jsdelivr": "dist/svg.pathmod.min.js",
+  "browser": "src/svg.pathmod.js",
+  "module": "src/svg.pathmod.js",
+  "keywords": [
+    "svg.js",
+    "pathmod"
+  ],
+  "bugs": "https://github.com/JanMisker/svg.pathmod.js/issues",
+  "license": "MIT",
+  "typings": "./svg.pathmod.js.d.ts",
+  "author": {
+    "name": "Jan Misker"
+  },
+  "contributors": [
+    {
+      "name": "Jan Misker"
+    }
+  ],
+  "homepage": "https://github.com/JanMisker/svg.pathmod.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JanMisker/svg.pathmod.js.git"
+  },
+  "scripts": {
+    "build": "npm run fix && npm run rollup",
+    "fix": "npx eslint ./src --fix",
+    "lint": "npx eslint ./src",
+    "rollup": "npx rollup -c .config/rollup.config.js",
+    "zip": "zip -j dist/svg.pathmod.js.zip -- LICENSE README.md dist/svg.pathmod.js dist/svg.pathmod.js.map dist/svg.pathmod.min.js dist/svg.pathmod.min.js.map",
+    "prepublishOnly": "rm -rf ./dist && npm run build",
+    "postpublish": "npm run zip"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-external-helpers": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/runtime": "^7.2.0",
+    "@babel/runtime-corejs2": "^7.2.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "rollup": "^1.1.0",
+    "rollup-plugin-babel": "^4.3.1",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-filesize": "^6.0.0",
+    "rollup-plugin-multi-entry": "^2.1.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-terser": "^4.0.2",
+    "rollup-plugin-uglify": "^6.0.1",
+    "rollup-plugin-uglify-es": "0.0.1"
+  },
+  "dependencies": {
+    "@svgdotjs/svg.js": "^3.0.0"
+  }
+}
