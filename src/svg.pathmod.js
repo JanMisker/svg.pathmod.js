@@ -107,7 +107,7 @@ function makeAbsolute (points) {
       points[i][2] = points[i - 1][2] + points[i][2]
     } else if (points[i][0] !== 'L') {
       // throw 'Only line paths supported'
-      return points
+      return false;
     }
   }
   return points
@@ -118,7 +118,10 @@ function simplify (points, tolerance, highestQuality) {
 
   if (points.length <= 2) return points
 
-  points = makeAbsolute(points)
+  let absPoints = makeAbsolute(points)
+  if (!absPoints) {
+    return points;
+  }
   var sqTolerance = tolerance !== undefined ? tolerance * tolerance : 1
 
   points = highestQuality ? points : simplifyRadialDist(points, sqTolerance)

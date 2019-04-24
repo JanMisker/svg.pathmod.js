@@ -1,7 +1,7 @@
 {
-  "name": "@svgdotjs/svg.pathmod.js",
-  "version": "3.0.0",
-  "description": "An extension for svg.js to modify paths",
+  "name": "svg.pathmod.js",
+  "version": "1.0.0",
+  "description": "An extension for svg.js to modify paths, for now only simplifying them",
   "main": "dist/svg.pathmod.js",
   "unpkg": "dist/svg.pathmod.min.js",
   "jsdelivr": "dist/svg.pathmod.min.js",
@@ -9,7 +9,8 @@
   "module": "src/svg.pathmod.js",
   "keywords": [
     "svg.js",
-    "pathmod"
+    "svg"
+    "path"
   ],
   "bugs": "https://github.com/JanMisker/svg.pathmod.js/issues",
   "license": "MIT",
@@ -65,6 +66,6 @@
     "rollup-plugin-uglify-es": "0.0.1"
   },
   "dependencies": {
-    "@svgdotjs/svg.js": "^3.0.0"
+    "@svgdotjs/svg.js": "^3.0.12"
   }
 }
