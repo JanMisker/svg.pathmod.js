@@ -9,7 +9,7 @@
   "module": "src/svg.pathmod.js",
   "keywords": [
     "svg.js",
-    "svg"
+    "svg",
     "path"
   ],
   "bugs": "https://github.com/JanMisker/svg.pathmod.js/issues",

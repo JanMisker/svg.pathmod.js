@@ -107,7 +107,7 @@ function makeAbsolute (points) {
       points[i][2] = points[i - 1][2] + points[i][2]
     } else if (points[i][0] !== 'L') {
       // throw 'Only line paths supported'
-      return false;
+      return false
     }
   }
   return points
@@ -120,7 +120,7 @@ function simplify (points, tolerance, highestQuality) {
 
   let absPoints = makeAbsolute(points)
   if (!absPoints) {
-    return points;
+    return points
   }
   var sqTolerance = tolerance !== undefined ? tolerance * tolerance : 1
 

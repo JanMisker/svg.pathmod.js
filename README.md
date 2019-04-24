@@ -3,7 +3,13 @@
 A plugin for the [svgdotjs.github.io](https://svgdotjs.github.io/) library to modify SVG paths.
 The core of this plugin is based on [simplify-js](https://github.com/mourner/simplify-js) (c) 2017, Vladimir Agafonkin
 
-# Demo
+# Get Started
+
+```sh
+npm install svg.pathmod.js
+```
+
+# Usage
 
 If you don't see image below look at this page on https://janmisker.github.io/svg.pathmod.js/, because inline SVG might be disabled.
 
@@ -30,13 +36,13 @@ The simplified version has only **16 points**, making it much more lightweight, 
 ```javascript
 path.simplify(5, false)
 ```
-
 <svg width="100" height="100">
   <path fill="none" stroke-width="3" stroke="#FF0000" d="M13 29L25 17L38 22L35 68L47 68L69 42 "></path>
 </svg>
+This results in a path consisting of just 6 points. Of course it depends on your use case what is an acceptable simplification. 
 
-# Get Started
-ToDo publish to npm
+## Destructive modification
+Do note that the path is modified in place, if you need to keep hold of the existing path make sure to clone it first.
 
 # Licence
 
